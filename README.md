@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ClimaHealth - Aplicativo de Saúde e Clima
 
-## Getting Started
+## 📱 Versão Android (Atual)
 
-First, run the development server:
+Este projeto foi **convertido de Next.js/React para Android nativo** usando Kotlin e Jetpack Compose, mantendo todas as funcionalidades originais.
+
+### Características Principais
+- **Target SDK**: 36 (Android 15)
+- **Minimum SDK**: 24 (Android 7.0)
+- **Linguagem**: Kotlin
+- **UI Framework**: Jetpack Compose
+- **Arquitetura**: MVVM + Repository Pattern
+
+### Como Executar
+1. Abra o projeto no Android Studio
+2. Configure sua API key do OpenWeatherMap no `gradle.properties`
+3. Execute o app no emulador ou dispositivo
+
+📖 **Documentação completa**: Veja [README_ANDROID.md](./README_ANDROID.md) para instruções detalhadas.
+
+---
+
+## 🌐 Versão Web (Legada)
+
+A versão original em Next.js ainda está disponível nos arquivos `src/` para referência.
+
+### Para executar a versão web legada:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔄 Conversão Realizada
 
-## Learn More
+### De Next.js/React para Android Kotlin:
+- ✅ **UI Components**: React → Jetpack Compose
+- ✅ **State Management**: React Hooks → ViewModels + StateFlow
+- ✅ **Navigation**: Next.js Router → Navigation Component
+- ✅ **Data Storage**: localStorage → DataStore
+- ✅ **API Calls**: fetch → Retrofit + OkHttp
+- ✅ **Location**: Browser Geolocation → Android Location Services
+- ✅ **Notifications**: Web Push → Android Notifications
+- ✅ **Build System**: webpack → Gradle + Kotlin DSL
 
-To learn more about Next.js, take a look at the following resources:
+### Funcionalidades Mantidas:
+- Dashboard com dados meteorológicos em tempo real
+- Análise de riscos de saúde personalizados
+- Sistema de alertas baseado em condições climáticas
+- Perfil de saúde completo com condições médicas
+- Modo família para gerenciar dependentes
+- Histórico de sintomas e relatórios
+- Dicas de prevenção personalizadas
+- Conteúdo educativo sobre saúde e clima
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📊 Status do Projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Android App**: ✅ Estrutura completa, dashboard funcional
+- **Telas Restantes**: 🚧 Em desenvolvimento (estrutura criada)
+- **Web App**: 📋 Arquivado para referência
 
-## Deploy on Vercel
+## 🏥 Sobre o ClimaHealth
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O ClimaHealth é uma aplicação que monitora condições climáticas e fornece alertas de saúde personalizados baseados no perfil médico do usuário. Desenvolvido como projeto de TCC, combina dados meteorológicos com informações de saúde para prevenir complicações relacionadas ao clima.
